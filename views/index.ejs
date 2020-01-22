@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" harset="utf-8">
+    <title>LunarMood</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+<div class="info">
+      <p><a href="#info" class="fas fa-info-circle"></a></p>
+    </div>
+
+    <div class="first">
+      <div class="lunBut">
+        <h1>LunarMood <i class="far fa-moon"></i></h1>
+        <p class="underText">Be prepared for the worst..</p>
+        <a href="#today" class="btn btn-outline-light">What's the moon today!?</a>
+        </div>
+      </div>
+      <div id="today" class="second">
+        <div class="lunBut">
+        <h1><%= moon %></h1>
+        <% if(moon === 'New Moon'){ %>
+          <p class="underText"><i class="fas fa-fist-raised"></i> Good luck, we've got a new moon, congrats!</p>
+          <%} else if(moon ==='Full Moon'){%>
+              <p class="underText"><i class="fab fa-galactic-senate"></i> May the force be with you, it's full moon...</p>
+            <%}%>
+        <a href="#tomorrow" class="btn btn-outline-light">What about tomorrow?!</a>
+        </div>
+      </div>
+      <div id="tomorrow" class="third">
+        <div class="lunBut">
+        <h1><%= tomorrow %></h1>
+        <% if(tomorrow === 'New Moon'){ %>
+          <p class="underText"><i class="fas fa-fist-raised"></i> Good luck, new moon incomming!!</p>
+        <%} else if(tomorrow ==='Full Moon'){%>
+            <p class="underText">Take it easy.. tomorrow we will suffer from FULL MOON!!</p>
+          <%}%>
+        <a href="#today" class="btn btn-outline-light">What's the moon today!?</a>
+        </div>
+      </div>
+      <div id="info" class="foot">
+        <div class="lunBut">
+        <h1 class="foot-text">Made with love just for your happiness <i class="far fa-grin-beam"></i></h1>
+          <p class="underText">By <a href="https://www.linkedin.com/in/vosjeffrey/">Jeffrey Vos</a></p>
+        </div>
+      </div>
+  </body>
+</html>
