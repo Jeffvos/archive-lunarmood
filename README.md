@@ -1,2 +1,2 @@
-# archive-lunarmood
-Archive of lunarmood, a tiny node.js app
+# lunarmood
+Lunarmood, a tiny node.js app
