@@ -1,20 +1,15 @@
-const express = require('express'),
-      app=express(),
-      lunar=require('./lunar.js');
+const express = require('express');
+const lunar = require('./lunar.js');
 
-app.set("view engine", "ejs");
-app.use(express.static(__dirname + "/public"));
+const app = express();
+const port = process.env.port || 7000;
 
-app.get('/', (req,res)=>{
-  const moon = lunar.getMoonPhase(),
-        tomorrow = lunar.getMoonPhase('tomorrow');
-  res.render('index',{moon:moon, tomorrow:tomorrow});
-});
+app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
-app.get('*', (req, res)=>{
-  res.redirect('/');
-});
+const mainRouter = require('./routes/main');
+app.use(mainRouter);
 
-app.listen('7070','0.0.0.0', () => {
-  console.log('running on port 8080 - quite server ctrl+c');
+app.listen(port, () => {
+  console.log(`server running on ${port}`);
 });
