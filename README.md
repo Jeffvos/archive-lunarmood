@@ -1,2 +1,2 @@
 # lunarmood
-Lunarmood, a tiny node.js app
+Lunarmood tracks the current moon phase, a tiny node.js app 
